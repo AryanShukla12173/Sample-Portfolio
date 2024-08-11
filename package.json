@@ -1,7 +1,6 @@
 { 
    "homepage": "https://Daredevil90.github.io/Portfolio/",
-  "name": "assignment-2",
-  "private": true,
+  "name": "sampleportfolio",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
