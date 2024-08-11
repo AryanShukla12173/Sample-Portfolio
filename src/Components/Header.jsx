@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useScroll } from './ScrollContext';
 
 function Header() {
-  const { aboutRef, projectsRef, skillsRef, experienceRef, contactRef, scrollToSection } = useScroll();
+  const { aboutRef, projectsRef, skillsRef, experienceRef, contactRef, scrollToSection,socialRef} = useScroll();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
   const navItems = [
@@ -10,7 +10,8 @@ function Header() {
     { name: "Projects", ref: projectsRef },
     { name: "Skills", ref: skillsRef },
     { name: "Experience", ref: experienceRef },
-    { name: "Contact Me", ref: contactRef }
+    { name: "Contact Me", ref: contactRef },
+    {name:"Socials", ref:socialRef}
   ];
   
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);

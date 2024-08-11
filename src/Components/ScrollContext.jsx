@@ -8,6 +8,7 @@ export const ScrollProvider = ({ children }) => {
   const skillsRef = useRef(null);
   const experienceRef = useRef(null);
   const contactRef = useRef(null);
+  const socialRef= useRef(null);
   console.log(projectsRef)
   const scrollToSection = (elementRef) => {
     window.scrollTo({
@@ -17,7 +18,7 @@ export const ScrollProvider = ({ children }) => {
   };
 
   return (
-    <ScrollContext.Provider value={{ aboutRef, projectsRef,skillsRef,experienceRef, contactRef,scrollToSection }}>
+    <ScrollContext.Provider value={{ aboutRef, projectsRef,skillsRef,experienceRef, contactRef,socialRef,scrollToSection }}>
       {children}
     </ScrollContext.Provider>
   );

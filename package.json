@@ -1,12 +1,14 @@
-{
+{ 
+   "homepage": "https://Daredevil90.github.io/Portfolio/",
   "name": "assignment-2",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predeploy": "npm run build",
     "dev": "vite",
-    "build": "vite build",
     "lint": "eslint .",
+    "build":"vite build",
     "preview": "vite preview",
     "deploy": "gh-pages -d dist"
   },
