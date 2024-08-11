@@ -1,5 +1,5 @@
 import React from 'react';
-import { useScroll } from './ScrollContext';
+import { useScroll } from './ScrollContext.jsx';
 const items = [
   {
     title: "Result Management System",

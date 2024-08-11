@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useScroll } from './ScrollContext';
+import { useScroll } from './ScrollContext.jsx';
 
 function Header() {
   const { aboutRef, projectsRef, skillsRef, experienceRef, contactRef, scrollToSection,socialRef} = useScroll();

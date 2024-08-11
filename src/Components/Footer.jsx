@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
-import { useScroll } from './ScrollContext';
+import { useScroll } from './ScrollContext.jsx';
 
 function Footer() {
   const {socialRef}= useScroll();
