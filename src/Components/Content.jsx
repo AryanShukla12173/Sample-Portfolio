@@ -3,12 +3,12 @@ import { useScroll } from './ScrollContext';
 const items = [
   {
     title: "Result Management System",
-    src: '#',
+    src: 'https://github.com/Daredevil90/Result-Analysis-System',
     text: "Web Application",
   },
   {
     title: "Basic Fintech Web Application",
-    src: '#',
+    src: 'https://github.com/Daredevil90/Assignment',
     text: "Details available on repository",
   },
 ];
@@ -32,8 +32,8 @@ function Content() {
         </div>
       </section>
       <section className='w-full my-1 p-10 bg-black border-2 border-blue-600 rounded-lg' ref={skillsRef}>
-        <h2 className='text-3xl md:text-4xl text-center text-white font-bold mb-8'>Skills</h2>
-        <div className='flex flex-wrap justify-center gap-4'>
+        <h2 className='text-3xl md:text-4xl text-center text-white font-bold mb-8 border-blue-600 border-b-4 '>Skills</h2>
+        <div className='flex flex-wrap justify-center gap-4' >
           {skills.map((skill, index) => (
             <div key={index} className='bg-blue-600 text-white px-4 py-2 rounded-full text-sm'>
               {skill}
@@ -62,9 +62,11 @@ function Content() {
         <h2 className='text-3xl md:text-4xl text-center text-white font-bold mb-8'>Projects</h2>
         <div className='flex flex-wrap justify-center gap-4'>
           {items.map((item, index) => (
+            <a  key={index} href={item.src}>
             <div
               key={index}
-              className='bg-black border border-blue-600 rounded-lg p-3  h-36 flex flex-col justify-between transition transform hover:scale-105 hover:shadow-lg'
+              className='bg-black border border-blue-600 rounded-lg p-3  h-36 flex flex-col justify-between transition transform hover:scale-105 hover:shadow-lg cursor-pointer'
+              // onClick={window.location.href=item.src}
             >
               <img src={item.src} alt={item.title} className='w-full h-16 object-cover rounded-md mb-2' />
               <div >
@@ -72,6 +74,7 @@ function Content() {
                 <p className='text-xs text-gray-400 truncate'>{item.text}</p>
               </div>
             </div>
+            </a>
           ))}
         </div>
       </section>

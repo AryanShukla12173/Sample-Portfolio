@@ -2,32 +2,29 @@ import React, { useState } from 'react';
 import { useScroll } from './ScrollContext';
 
 function Header() {
-  const { aboutRef, projectsRef, skillsRef, experienceRef, contactRef ,scrollToSection} = useScroll();
+  const { aboutRef, projectsRef, skillsRef, experienceRef, contactRef, scrollToSection } = useScroll();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  
   const navItems = [
     { name: "About Me", ref: aboutRef },
     { name: "Projects", ref: projectsRef },
-    { name:"Skills", ref:skillsRef },
-    { name:"Experience" , ref:experienceRef},
-    { name:"Contact Me", ref:contactRef}
+    { name: "Skills", ref: skillsRef },
+    { name: "Experience", ref: experienceRef },
+    { name: "Contact Me", ref: contactRef }
   ];
-
+  
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-
+  
   return (
-    <nav className='bg-black w-full sticky top-0 z-50'>
+    <nav className='bg-black w-full sticky top-0 z-50 p-3'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-        <div className='flex items-center justify-between h-16'>
-          <div className='flex-shrink-0'>
-            <span className='text-white text-2xl font-bold'>Logo</span>
-          </div>
+        <div className='flex items-center justify-center h-16'>
           <div className='hidden md:block'>
-            <ul className='flex space-x-4'>
+            <ul className='flex space-x-6'>
               {navItems.map((item, index) => (
                 <li
                   key={index}
-                  className='text-gray-300 hover:bg-blue-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium cursor-pointer transition duration-300 ease-in-out'
+                  className='text-gray-300 hover:bg-blue-600 hover:text-white px-4 py-2 rounded-md text-lg font-medium cursor-pointer transition duration-300 ease-in-out'
                   onClick={() => scrollToSection(item.ref)}
                 >
                   {item.name}

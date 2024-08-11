@@ -8,10 +8,10 @@ export const ScrollProvider = ({ children }) => {
   const skillsRef = useRef(null);
   const experienceRef = useRef(null);
   const contactRef = useRef(null);
-
+  console.log(projectsRef)
   const scrollToSection = (elementRef) => {
     window.scrollTo({
-      top: elementRef.current.offsetTop,
+      top: elementRef.current.offsetTop-100,
       behavior: 'smooth'
     });
   };
