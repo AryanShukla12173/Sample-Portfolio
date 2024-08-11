@@ -17,20 +17,20 @@ function Content() {
   const { aboutRef, projectsRef, skillsRef, experienceRef, contactRef } = useScroll();
   return (
     <>
-      <section className='flex flex-row w-screen gap-6 my-1  ' ref={aboutRef}>
-        <div className='w-full  bg-black border-2 border-blue-600 rounded-lg p-6 text-pretty '>
-          <h1 className='text-3xl md:text-4xl font-bold text-white mb-4'>
+      <section className='flex flex-row w-screen gap-6  bg-gray-900  ' ref={aboutRef}>
+        <div className='w-full   border-2 border-blue-600 rounded-lg p-6 text-pretty '>
+          <h1 className='text-3xl md:text-4xl font-bold text-[#C9D6EA] mb-4'>
             Hello, I'm <span className='name'>Aryan Shukla</span>
           </h1>
-          <p className='text-xl text-gray-300 leading-relaxed'>
+          <p className='text-xl text-[#C9D6EA] leading-relaxed'>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut at corrupti deserunt expedita. Molestias rem illo eos explicabo earum ex repellat autem sit deleniti laudantium consectetur eius, facilis labore ipsa.
           </p>
         </div>
         
       </section>
-      <section className='w-full my-1 p-16 bg-black border-2 border-blue-600 rounded-lg' ref={skillsRef}>
-        <h2 className='text-3xl md:text-4xl text-center text-white font-bold mb-8'>Skills</h2>
-        <div className='flex flex-wrap justify-center gap-4' >
+      <section className='w-full p-16 bg-blue-950    ' ref={skillsRef}>
+        <h2 className='text-3xl md:text-4xl text-center text-[#C9D6EA] font-bold mb-8'>Skills</h2>
+        <div className='flex flex-wrap justify-center gap-4 ' >
           {skills.map((skill, index) => (
             <div key={index} className='bg-blue-600 text-white px-4 py-2 rounded-full text-sm'>
               {skill}
@@ -38,9 +38,9 @@ function Content() {
           ))}
         </div>
       </section>
-
-      <section className='w-full my-1 p-16 bg-black border-2 border-blue-600 rounded-lg' ref={experienceRef}>
-        <h2 className='text-3xl md:text-4xl text-center text-white font-bold mb-8'>Experience</h2>
+ 
+      <section className='w-full  p-16 bg-gray-900 border-2 border-blue-600 rounded-lg' ref={experienceRef}>
+        <h2 className='text-3xl md:text-4xl text-center text-[#C9D6EA] font-bold mb-8'>Experience</h2>
         <div className='space-y-6'>
           <div className='border-l-4 border-blue-600 pl-4'>
             <h3 className='text-xl text-white font-semibold'>Intern</h3>
@@ -66,8 +66,8 @@ function Content() {
       </section>
 
      
-      <section className='w-full my-1 p-16 bg-black border-2 border-blue-600 rounded-lg' ref={projectsRef}>
-  <h2 className='text-3xl md:text-4xl text-center text-white font-bold mb-8'>Projects</h2>
+      <section className='w-full  p-16 bg-blue-950  ' ref={projectsRef}>
+  <h2 className='text-3xl md:text-4xl text-center text-[#C9D6EA] font-bold mb-8'>Projects</h2>
   <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
     {items.map((item, index) => (
       <a key={index} href={item.src} className='block '>
@@ -86,8 +86,8 @@ function Content() {
     ))}
   </div>
 </section>
-       <section className='w-full my-1 p-10 bg-black border-2 border-blue-600 rounded-lg' ref={contactRef}>
-        <h2 className='text-3xl md:text-4xl text-center text-white font-bold mb-8'>Contact Me</h2>
+       <section className='w-full  p-10 bg-gray-900 border-2 border-blue-600 rounded-lg' ref={contactRef}>
+        <h2 className='text-3xl md:text-4xl text-center text-[#C9D6EA] font-bold mb-8'>Contact Me</h2>
         <form className='max-w-md mx-auto'>
           <div className='mb-4'>
             <input type="text" placeholder="Name" className='w-full p-2 rounded bg-gray-800 text-white border border-blue-600' />

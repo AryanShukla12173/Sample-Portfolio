@@ -25,7 +25,7 @@ function Header() {
               {navItems.map((item, index) => (
                 <li
                   key={index}
-                  className='text-gray-300 hover:bg-blue-600 hover:text-white px-4 py-2 rounded-md text-lg font-medium cursor-pointer transition duration-300 ease-in-out'
+                  className='text-gray-300 hover:bg-blue-600 hover:text-white px-4 py-2 rounded-md text-lg font-medium cursor-pointer transition duration-300 ease-in-out text-pretty underline'
                   onClick={() => scrollToSection(item.ref)}
                 >
                   {item.name}

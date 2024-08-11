@@ -12,7 +12,7 @@ export const ScrollProvider = ({ children }) => {
   console.log(projectsRef)
   const scrollToSection = (elementRef) => {
     window.scrollTo({
-      top: elementRef.current.offsetTop-100,
+      top: elementRef.current.offsetTop,
       behavior: 'smooth'
     });
   };

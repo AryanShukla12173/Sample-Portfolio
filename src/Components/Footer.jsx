@@ -5,7 +5,7 @@ import { useScroll } from './ScrollContext.jsx';
 function Footer() {
   const {socialRef}= useScroll();
   return (
-    <footer className='w-full bg-black py-6' ref={socialRef}>
+    <footer className='w-full bg-blue-950 py-6' ref={socialRef}>
       <div className='container mx-auto flex flex-col items-center'>
       <h2 className='text-3xl md:text-4xl text-center text-white font-bold mb-8'>Socials</h2>
         <div className='flex space-x-6 mb-4'>
