@@ -11,14 +11,22 @@ export const ScrollProvider = ({ children }) => {
   const socialRef= useRef(null);
   console.log(projectsRef)
   const scrollToSection = (elementRef) => {
+    console.log(elementRef.current.offsetTop)
     window.scrollTo({
-      top: elementRef.current.offsetTop,
+      
+      top: elementRef.current.offsetTop-100,
+      behavior: 'smooth'
+    });
+  };
+  const scrollToSection1 = (elementRef) => {
+    window.scrollTo({
+      top: elementRef.current.offsetTop-360,
       behavior: 'smooth'
     });
   };
 
   return (
-    <ScrollContext.Provider value={{ aboutRef, projectsRef,skillsRef,experienceRef, contactRef,socialRef,scrollToSection }}>
+    <ScrollContext.Provider value={{ aboutRef, projectsRef,skillsRef,experienceRef, contactRef,socialRef,scrollToSection,scrollToSection1}}>
       {children}
     </ScrollContext.Provider>
   );

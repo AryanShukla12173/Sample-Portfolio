@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useScroll } from './ScrollContext.jsx';
 
 function Header() {
-  const { aboutRef, projectsRef, skillsRef, experienceRef, contactRef, scrollToSection,socialRef} = useScroll();
+  const { aboutRef, projectsRef, skillsRef, experienceRef, contactRef, scrollToSection,scrollToSection1,socialRef} = useScroll();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
   const navItems = [
@@ -60,7 +60,7 @@ function Header() {
                 key={index}
                 className='text-gray-300 hover:bg-blue-600 hover:text-white block px-3 py-2 rounded-md text-base font-medium cursor-pointer transition duration-300 ease-in-out'
                 onClick={() => {
-                  scrollToSection(item.ref);
+                  scrollToSection1(item.ref);
                   setIsMenuOpen(false);
                 }}
               >
